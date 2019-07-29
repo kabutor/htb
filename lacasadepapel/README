@@ -1,5 +1,5 @@
 
-Alternate way to get into the box, we don't need to do any certificate stuff with this
+Alternate way to get into the box, we don't need to do any certificate to log in as in the intended way.
 
 Generate a new rsa publci/private key with ssh-keygen, public key id_rsa.pub lets convert to base64, and call it PAYLOADBASE64
 
@@ -34,3 +34,5 @@ ProxyChains-3.1 (http://proxychains.sf.net)
 |S-chain|-<>-127.0.0.1:1080-<><>-127.0.0.1:8000-<><>-OK
 <li><a href="?path=SEASON-1">SEASON-1</a></li><li><a href="?path=SEASON-2">SEASON-2</a></li><li><strong>Select a season</strong></li>
 '''
+
+I'll submit id_rsa file and a python script to upload the .ssh key to the user, so you can try it yourself
