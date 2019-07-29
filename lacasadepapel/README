@@ -35,4 +35,4 @@ ProxyChains-3.1 (http://proxychains.sf.net)
 <li><a href="?path=SEASON-1">SEASON-1</a></li><li><a href="?path=SEASON-2">SEASON-2</a></li><li><strong>Select a season</strong></li>
 '''
 
-I'll submit id_rsa file and a python script to upload the .ssh key to the user, so you can try it yourself
+You have here also a python script to upload a public key and the private id_rsa file to enable the dynamic tunnel
