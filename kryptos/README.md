@@ -1,4 +1,4 @@
-#Kryptos 
+# Kryptos 
 
 Esta no llegue a completarla, no hice ni user, pero la entrada me entretuvo la parte de vencer el CSRF que te 
 impedia fuzzear el login, para resolverlo tuve que aprender mitmproxy, y con un pequeño script python poder modificar
