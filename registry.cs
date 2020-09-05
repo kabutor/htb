@@ -23,12 +23,14 @@ public class Program
         {
             Console.WriteLine(args[0]);
         }
-        using (RegistryKey key = Registry.LocalMachine.OpenSubKey(args[0]))
-	    {
-        var security = key.GetAccessControl();
+
+        RegistryKey key = Registry.LocalMachine.OpenSubKey(args[0]);
+        RegistrySecurity security = key.GetAccessControl();
 
 
         foreach (RegistryAccessRule rule in security.GetAccessRules(true, true, typeof(System.Security.Principal.NTAccount)))
+            {
+            if (rule.InheritanceFlags.ToString() == "None")
             {
                 Console.WriteLine("        User: {0}", rule.IdentityReference);
                 Console.WriteLine("        Type: {0}", rule.AccessControlType);
@@ -38,6 +40,7 @@ public class Program
                 //Console.WriteLine("   Inherited? {0}", rule.IsInherited);
                 Console.WriteLine();
             }
-        }
+            }
+        
 	}
 }
