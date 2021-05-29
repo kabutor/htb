@@ -9,7 +9,7 @@ ese mensaje.
 ![Cloudflare](imgs/bloqueado.PNG)
 ## Como bloquean?
 
-Antes creo que se hacia por DNS, simplemente los DNS no resolvian la ip del dominio, pero ésto se lo salta el mas necio, cambiar los DNS por los de 
+Antes creo que se hacia por DNS, simplemente los DNS no resolvian la ip del dominio, pero eso se lo salta el mas necio, cambiar los DNS por los de 
 Google y a correr, esto lo cambiaron, yo pensaba que bloqueaban la ip, pero no tiene sentido, 1337x está alojado en Cloudflare, si bloquean la ip del 
 servidor, bloquearian miles de webs, un poco de teoria:
 
