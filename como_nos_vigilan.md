@@ -41,7 +41,7 @@ Ahora tan solo has de ir a https://1377x.to y como por arte de magia el bloqueo 
 ![Cloudflare](imgs/Capture2.PNG)
 ## El truco
 
-El *truco* es que necesitas **Firefox 84**, si tienes una versión mas moderna, como la 88 que es la actual el soporte ESNI ha desparecido, por lo visto 
+El *truco* es que necesitas **Firefox 84 o Firefox ESR**, si tienes una versión mas moderna, como la 88 que es la actual el soporte ESNI ha desparecido, por lo visto 
 no es 100% segura y se ha dejado de lado en favor de ECH (https://blog.cloudflare.com/encrypted-client-hello/) que es una cosa que debe hacer lo mismo que ESNI, pero mejor y que desgraciadamente ahora mismo no la soporta nadie, ni siquiera Cloudflare.
 El otro truco que sería quedarse con la version del Firefox antigua tampoco es muy efectiva, porque el ESNI lo soporta Cloudflare, pero posiblemente 
 muchos otros hosting no, así que tampoco es una solución efectiva.
