@@ -53,7 +53,7 @@ Now copy all inside the mounted 4.hfs into the pendrive
 ```
 rsync -avxHEWz --numeric-ids --info=progress2 /mnt/origin /mnt/pen
 ```
-Once it finish, go where you have the ***SharedSupport*** folder (the one that ManeInstallMacOS created) and move the folder with all it's contents into /mnt/pen/Install macOS High Sierra.app/Contents , you have to end with a Content/SharedSupport folder in there with all the dmg files.
+Once it finish, go where you have the ***SharedSupport*** folder (the one that MakeInstallMacOS created) and move the folder with all it's contents into /mnt/pen/Install macOS High Sierra.app/Contents , you have to end with a Content/SharedSupport folder in there with all the dmg files.
 
 ### Make it bootable
 Format the sdb1 partition as fat32, download Clover from sf (https://sourceforge.net/projects/cloverefiboot/files/latest/download).
