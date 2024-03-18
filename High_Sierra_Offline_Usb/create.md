@@ -60,3 +60,5 @@ That's it, unmount the partitions and try it, this I manage to make it work, in 
 
 
 [1] https://aur.archlinux.org/packages/hfsprogs
+
+[You find this useful in any way and want to thank me, you can do so with a coffee, thanks](https://www.buymeacoffee.com/kabutor)
