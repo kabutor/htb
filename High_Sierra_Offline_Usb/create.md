@@ -6,7 +6,7 @@ More than once I get some old mac laptops and iMac to reformat, and is a surpris
 
 You say, I can install Lion and the update it to High Sierra, ***wrong!!*** ***The Recovery Server Could Not Be Contacted***, Lion is too old for anything, Opencore is an alternative right? ***wrong!!!*** OpenCore needs macos 10.10 at least. The best option is to have a usb pendrive, do a High-Sierra install and from there you can stay there or go OpenCore.
 I tried lots of methods to do a usb pendrive, all of them requires internet, and when you boot from the Macos recovery pendrive, and start the install you'll get the "The recovery sever could not be contacted". 
-Does Apple plugged of the recovery server, or did they upgrade it to TLS1.2 and you can't connect to them? No idea, but the only solution is to create your own offline recovery boot live usb. Enough rant, let's go.
+Does Apple plugged of the recovery server, or did they upgrade it to TLS1.2 and you can't connect to them? [2] No idea, but the only solution is to create your own offline recovery boot live usb. Enough rant, let's go.
 
 ### Download the High Sierra files and cook them
 
@@ -60,5 +60,5 @@ That's it, unmount the partitions and try it, this I manage to make it work, in 
 
 
 [1] https://aur.archlinux.org/packages/hfsprogs
-
+[2] After posting this I came into this link that explain why it's giving such error (certificate or tls1.2 error) (https://mrmacintosh.com/how-to-fix-the-recovery-server-could-not-be-contacted-error-high-sierra-recovery-is-still-online-but-broken/)
 [You find this useful in any way and want to thank me, you can do so with a coffee, thanks](https://www.buymeacoffee.com/kabutor)
