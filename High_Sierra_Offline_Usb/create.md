@@ -36,8 +36,11 @@ dmg2img -v -i BaseSystem.dmg -p 4 -o 4.hfs
 
 ### Prepare the pendrive
 Prepare the pendrive, I'm not going into a lot of detail on how to do it, and I'm gonna use the device names below as a reference, use the ones of your pendrive, use fdisk, gdisk or gparted, we need to set it as GPT, with the following partitions:
+
 1 - (/dev/sdb1) 200M partition ***EF00 EFI System***
+
 2 - a 129M gap with nothing in it (I'm not 100% sure if this is needed, but I read that it is, I did it using gdisk, when you set to create a new partition it asks for the First sector of the second partition, you can type +129M and that will leave the gap)
+
 3- (/dev/sdb2) a partition to hold all the files, about 8.5GB should be enough ***AF00 Apple HFS/HFS+*** (I also read that you need to leave a gap at the end of 129M, but if the pendrive is big, just do the 8.5Gb partition and can leave the rest empty)
 
 Format and mount as hfsplus sdb2 on ***/mnt/pen*** mount the 4.hfs as a loop unit on ***/mnt/origin***
