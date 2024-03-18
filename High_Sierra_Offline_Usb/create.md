@@ -4,7 +4,7 @@
 
 More than once I get some old mac laptops and iMac to reformat, and is a surprise when you try to update it to the latest version supported, and find out you can't. Yes, sometimes pressing CMD+OPT+R it should install the latest available version, but then why it install Lion, when this is a Macbook8,1 macbook pro late 2011? No idea.
 
-You say, I can install Lion and the update it to High Sierra, ***wrong!!*** You can't contact the Apple update servers, Lion is too old for anything, Opencore is an alternative right? ***wrong!!!*** OpenCore needs macos 10.10 at least. The best option is to have a usb pendrive, do a High-Sierra install and from there you can stay there or go OpenCore.
+You say, I can install Lion and the update it to High Sierra, ***wrong!!*** ***The Recovery Server Could Not Be Contacted***, Lion is too old for anything, Opencore is an alternative right? ***wrong!!!*** OpenCore needs macos 10.10 at least. The best option is to have a usb pendrive, do a High-Sierra install and from there you can stay there or go OpenCore.
 I tried lots of methods to do a usb pendrive, all of them requires internet, and when you boot from the Macos recovery pendrive, and start the install you'll get the "The recovery sever could not be contacted". 
 Does Apple plugged of the recovery server, or did they upgrade it to TLS1.2 and you can't connect to them? No idea, but the only solution is to create your own offline recovery boot live usb. Enough rant, let's go.
 
