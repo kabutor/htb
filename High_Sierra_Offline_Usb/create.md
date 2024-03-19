@@ -63,5 +63,7 @@ That's it, unmount the partitions and try it, this I manage to make it work, in 
 
 
 [1] https://aur.archlinux.org/packages/hfsprogs
+
 [2] After posting this I came into this link that explain why it's giving such error (certificate or tls1.2 error) (https://mrmacintosh.com/how-to-fix-the-recovery-server-could-not-be-contacted-error-high-sierra-recovery-is-still-online-but-broken/)
+
 [You find this useful in any way and want to thank me, you can do so with a coffee, thanks](https://www.buymeacoffee.com/kabutor)
