@@ -6,7 +6,7 @@ Lots of times certificates are not allowed to export the private key, you can us
 https://github.com/iSECPartners/jailbreak to bypass it, copy this script in the same folder as the jaibreak/binaries and run as
 $ jailbreak64.exe powershell -exec bypass ..\Export-ClientCertificates.ps1
 
-to import all at the same time create a file called ImportAllPFX.ps1 and put inside:
+to import all at the same time create a file called ImportAllPFX.ps1 with:
 ------------------------------------
 $pfX = Get-ChildItem *.pfx
 $pwd = ConvertTo-SecureString -String "12345" -AsPlainText -Force
@@ -16,6 +16,8 @@ ForEach ($cert in $pfx){
     Import-PfxCertificate -Password $pwd -FilePath $cert -CertStoreLocation Cert:\CurrentUser\My -Exportable
     }
 -------------------------------------
+run it as the other one
+$ powershell -exec bypass .\ImportAllPFX.ps1
 #>
 
 
@@ -29,7 +31,7 @@ $passwd = ConvertTo-SecureString -String $Password -Force -AsPlainText
 $certPath = "Cert:\CurrentUser\My"
 
 # first IF ? If it's a certificate seconf IF ? it's from the FNMT (spanish cert authority) remove if you don't need it
-$cert = Get-ChildItem $certPath -Recurse | ? { $_ -is [System.Security.Cryptography.X509Certificates.X509Certificate2] } |  ? {$_.Issuer -eq "CN=AC FNMT Usuarios, OU=Ceres, O=FNMT-RCM, C=ES" }
+$cert = Get-ChildItem $certPath -Recurse | ? { $_ -is [System.Security.Cryptography.X509Certificates.X509Certificate2] } |  ? {$_.Issuer.Substring(0,5) -eq "CN=AC" }
 
 
 Foreach ( $cer in $cert ) {
@@ -43,8 +45,7 @@ Foreach ( $cer in $cert ) {
 
         
         # export it to the parent directory remove (".." + ) if not
-        $exportFile = "..\" + "$certCommonName ($certThumbprint).pfx"
-
+        $exportFile = "..\" + "$certCommonName ($certThumbprint).pfx".Replace(":","_")
 
         $cer | Export-PfxCertificate -FilePath  $exportFile -Password $passwd -ChainOption BuildChain
         }
